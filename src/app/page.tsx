@@ -4,7 +4,8 @@ import Header from "./components/header";
 import Infos from "./pages/infos";
 import Prestations from "./pages/prestations";
 import FormulaireDevis from "./pages/formulaire-devis";
-import Contact from "./pages/contact";
+import Footer from "./components/footer";
+import Vehicules from "./pages/vehicules";
 
 export default function Home() {
 
@@ -12,12 +13,10 @@ export default function Home() {
         <div>
             {Header()}
             {Infos()}
-            <hr />
+            {Vehicules()}
             {Prestations()}
-            <hr />
             {FormulaireDevis()}
-            <hr />
-            {Contact()}
+            {Footer()}
         </div>
     );
 }

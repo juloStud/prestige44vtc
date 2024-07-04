@@ -4,28 +4,23 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 
 export default function Header() {
-    const sendEmail = async () => {
-        try {
-            const response = await fetch('http://localhost:3000/api/send', { method: 'POST' });
-        } catch (error) {
-            console.log(error)
-        };
-    }
 
     return (
-      <Row className='my-5'>
-        <Navbar fixed="top" bg="light" expand="lg">
-        <Container>
-          <Navbar.Brand href="#Home">
-            <img src="/assets/images/logo-ker-v.png" alt="Logo" width="50" height="50" />
+      <Row>
+        <Navbar fixed="top" bg="dark" variant="dark" expand="lg" className='pb-0'>
+        <Container fluid>
+          <Navbar.Brand href="/" className='ml-5'>
+            <img src="/assets/images/logo-ker-v.png" alt="Logo" width="50" height="50" className='ml-5' />
+            <span className="text-white">Ker-V</span>
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="navbar-nav" />
           <Navbar.Collapse id="navbar-nav">
             <Nav className="ms-auto">
-              <Nav.Link href="#Accueil">Accueil</Nav.Link>
-              <Nav.Link href="#Prestations">Prestations</Nav.Link>
-              <Nav.Link href="#Devis">Devis</Nav.Link>
-              <Nav.Link href="#Contact" onClick={sendEmail}>Contact</Nav.Link>
+              <Nav.Link href="/" className="text-white">Accueil</Nav.Link>
+              <Nav.Link href="#Vehicules" className="text-white">Véhicules</Nav.Link>
+              <Nav.Link href="#Prestations" className="text-white">Prestations</Nav.Link>
+              <Nav.Link href="#Devis" className="text-white">Devis</Nav.Link>
+              <Nav.Link href="#Contact" className="text-white">Contact</Nav.Link>
             </Nav>
           </Navbar.Collapse>
         </Container>

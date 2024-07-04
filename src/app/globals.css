@@ -1,0 +1,6 @@
+:target::before {
+    content: "";
+    display: block;
+    height: 50px; /* Ajustez cette valeur en fonction de la hauteur de votre barre de navigation */
+    margin-top: -50px; /* Utilisez la même valeur négative que la hauteur */
+  }
